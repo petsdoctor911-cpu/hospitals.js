@@ -1,0 +1,724 @@
+const hospitalData = {
+  "Hyderabad": [
+    {
+      "hospitalName": "Ankura Hospital for women and Children (A Unit of Ankura Medical and Research Centre Pvt Ltd)",
+      "address": "8-2-686/A/B/1/Vengalrao building",
+      "contacts": []
+    },
+    {
+      "hospitalName": "Aster Prime Hospital",
+      "address": "7-1-450/20 Plot No 2 and 4 Mythri Vihar Ameerpet Hyderabad",
+      "contacts": ["Devanand: 9995998832"]
+    },
+    {
+      "hospitalName": "Hyderabad Multispeciality Hospital",
+      "address": "Malakpet",
+      "contacts": ["Pradeep: 7680883666"]
+    },
+    {
+      "hospitalName": "Mythri Hospital",
+      "address": "Mythri Hospital Pillar No 81 Mehdipatnam",
+      "contacts": ["Akheel: 9160378092"]
+    },
+    {
+      "hospitalName": "Smiline Dental Hospital Pvt Ltd",
+      "address": "8-3-952/10/2 Srinagar Colony Road Punjagutta Hyderabad",
+      "contacts": ["Srinivas: 919347035432"]
+    },
+    {
+      "hospitalName": "Apple Oral and Dental Private Limited",
+      "address": "9-6-1/2",
+      "contacts": ["DR BNSOWMYA: 9949587582", "Dr KURUGUNTLA NANDINI: 7989629956"]
+    },
+    {
+      "hospitalName": "OMEGA HOSPITALS",
+      "address": "roadno12 Mlacolony",
+      "contacts": ["Dr SYED ALI ABBAS BILGRAMI: 9700860811", "VIJAY KUMAR: 8686320657", "B. SUJATHA: 9032802410"]
+    },
+    {
+      "hospitalName": "APOLLO HOSPITALS",
+      "address": "3-5-836 to 838 Near Old MLA Qrts, Hyderguda, Hyderabad",
+      "contacts": ["Dr Saranya C: 8978934244"]
+    },
+    {
+      "hospitalName": "DR AGARWAL HEALTH CARE LIMITED",
+      "address": "6-3-712/80/81",
+      "contacts": ["Dr AGARWAL HEALTH CARE LIMITED: 9000441485", "Dr KARLAPUDI HARINATH BABU: 9848465560", "BHAGAVATHAM SUNEETA: 9963614101", "K.RAMA DEVI: 9912097040"]
+    },
+    {
+      "hospitalName": "RISHAB EYE CENTRE",
+      "address": "35-60/1",
+      "contacts": ["Dr Rita B Shaw: 9848186712", "M.NAGALAXMI: 9848741553"]
+    },
+    {
+      "hospitalName": "DRISHTI EYE CARE CENTRE",
+      "address": "8-3-1100/6/114A",
+      "contacts": ["Dr MADHUKAR REDDY K: 9848018170", "KAMATHAM INDIRAPRIYADARSHINI: 9618277109"]
+    },
+    {
+      "hospitalName": "ADITYA HOSPITAL",
+      "address": "HYDERABAD",
+      "contacts": ["DR B.SARITHA: 8374447214", "A.SANTHOSH: 8333816187"]
+    },
+    {
+      "hospitalName": "ALPHA SUPER SPECIALITY HOSPITAL",
+      "address": "HYDEARBAD",
+      "contacts": ["DR SYED SIRAJ UDDIN: 9396506764", "JYOTHI: 9666507511", "GADDAM JHANSI: 8143306952"]
+    },
+    {
+      "hospitalName": "NIKHIL HOSPITAL",
+      "address": "HYDERABAD",
+      "contacts": ["Dr Neeshma: 7893933335"]
+    },
+    {
+      "hospitalName": "SOWMYA HOSPITAL RAMNAGAR",
+      "address": "HYDERABAD",
+      "contacts": ["DR RAJESHWAR RAO: 9848485834", "GULAGATTU EMIMA: 9989294640"]
+    },
+    {
+      "hospitalName": "SRIDHAR MULTI SPECIALITY HOSPITAL",
+      "address": "9-79, MARUTHI NAGAR ,SANTHOSH NAGAR ,HYD",
+      "contacts": ["DR HIMABINDU: 9703535437", "DR. MAHENDER: 8919840834", "Dr NARENDER KUMAR: 9010124956", "DAYANANDAM: 9440567976", "MAHMOODA NASEER: 8333817238"]
+    },
+    {
+      "hospitalName": "NICE INSTITUTE FOR THE NEWBORN",
+      "address": "10-2-247 248, SHANTI NAGAR, OFF. MASAB TANK, HYDERABAD-57",
+      "contacts": ["Dr P SURESH KUMAR: 9490759415"]
+    },
+    {
+      "hospitalName": "THE DECCAN HOSPITAL",
+      "address": "-364076 Somajiguda",
+      "contacts": ["Mr C Damodar Reddy: 9849338067"]
+    },
+    {
+      "hospitalName": "KAMALA HOSPITAL AND RESEARCH CENTRE FOR THALASSEMIA AND SICKLE CELL PATIENTS",
+      "address": "8-13-95/1/C",
+      "contacts": ["KAVITHA: 9010867696", "Dr SUMAN JAIN: 9966880711"]
+    },
+    {
+      "hospitalName": "NIRMALA MATERNITY ORTHOPAEDICS AND GENERAL HOSPITAL",
+      "address": "10-3-761/10",
+      "contacts": ["NUZAHAT FEROZ: 7337260552"]
+    },
+    {
+      "hospitalName": "M/s. APOLLO SPECTRA HOSPITAL",
+      "address": "7-1-57/B&C, SHYAM KARAN ROAD, ANANDBAGH, AMEERPET",
+      "contacts": ["Dr KRISHNAVENI: 9849050806", "CHANDI HYMAWATHI: 9573159509"]
+    },
+    {
+      "hospitalName": "ST THERESA HOSPITAL",
+      "address": "7 1 645 A",
+      "contacts": ["DR LAITHA: 9491415040", "SHARADA: 7989462932"]
+    },
+    {
+      "hospitalName": "MEDIVISION EYE CARE CENTRE PRIVATE LIMITED COMPANY",
+      "address": "10-3-304/F/1 to 4, INDIRASADAN, HUMAYUN NAGAR MAIN ROAD, HYDERABAD-500028",
+      "contacts": ["Dr Rupak Kumar Reddy: 9100123261", "M. ANITHA: 9010993782"]
+    },
+    {
+      "hospitalName": "Asian Institute of Gastroenterology",
+      "address": "Red Rose Cafe Lane, Somajiguda, Hyderabad",
+      "contacts": ["K S Ram: 9963333711"]
+    },
+    {
+      "hospitalName": "Suraksha Children Hospital",
+      "address": "12-3-64, Beside tarnaka flyover",
+      "contacts": ["Sridhar: 9703733669"]
+    },
+    {
+      "hospitalName": "SOWJANYA DENTAL HOSPITALS",
+      "address": "3-6-198 / F / 7, 1st Floor, Shreemukh Complex, Himayatnagar, Hyderabad ? 500 029",
+      "contacts": ["DR SOWJANYA: 9704848000", "BHARATHI: 8333816199"]
+    },
+    {
+      "hospitalName": "A.P SUPERSPECIALITY DENTAL HOSPITAL",
+      "address": "JUBILEE HILLS HYD",
+      "contacts": ["Dr. M D QUSROO AHMED: 9491212111", "ARUNA: 8333816596"]
+    },
+    {
+      "hospitalName": "OUTLOOK DENTAL HOSPITAL",
+      "address": "PLOT NO 86, RTC COLONY, TRIMULGHERRY",
+      "contacts": ["Dr P DINESH: 9866559091"]
+    },
+    {
+      "hospitalName": "SV HAPPY SMILES MULTISPECIALITY DENTAL HOSPITAL",
+      "address": "38, 5-5-181/2",
+      "contacts": ["Dr A CHANDRA SHEKAR: 9701551551"]
+    },
+    {
+      "hospitalName": "SHINE N SMILE DENTAL HOSPITAL",
+      "address": "3-4-174/7",
+      "contacts": ["Dr K SHRAVAN KUMAR: 9246817911"]
+    },
+    {
+      "hospitalName": "PARTHA DENTAL",
+      "address": "7-1-201/2",
+      "contacts": ["Dr Aditi Nethikar: 8500779000"]
+    },
+    {
+      "hospitalName": "SIGMA HOSPITALS",
+      "address": "16-11-740/3/14, PLOT NO: 32, DILSUKHNAGAR",
+      "contacts": ["DR Jogireddy: 9700009432", "Dr Jogireddy: 8499938393"]
+    },
+    {
+      "hospitalName": "SRESHTA SRI KAMALA HOSPITALS",
+      "address": "Dilsukh Nagar",
+      "contacts": ["Dr Dilip Reddy: 7799702778"]
+    },
+    {
+      "hospitalName": "MAHAVIR HOSPITAL AND RESEARCH CENTRE",
+      "address": "MASAB TANK, HYD",
+      "contacts": ["Dr PRASHANTH: 9849409446", "J.SUKANYA: 8790356610", "TALLA NAGESH GOUD: 9866047514"]
+    },
+    {
+      "hospitalName": "HYDERABAD NURSING HOME",
+      "address": "5-9-29/40, BASHEERBAGH, HYDERABAD",
+      "contacts": ["DR THUNTAPURAM KARTHIK: 9703120022"]
+    },
+    {
+      "hospitalName": "Maxivision Eye Hospitals Private Limited",
+      "address": "6-3-903/1/A/1/1, Raj Bhavan Road, somajiguda",
+      "contacts": ["SARITHA: 9640899455", "Dr SAHITYA: 9390035948"]
+    },
+    {
+      "hospitalName": "INTEGRO HOSPITAL",
+      "address": "12-2-725/2",
+      "contacts": ["KAREEMUNNISA BEGUM: 9676394983"]
+    },
+    {
+      "hospitalName": "Eye Care Hyderabad",
+      "address": "16-10-48/A",
+      "contacts": ["KALTA SUDHA: 8333816105"]
+    },
+    {
+      "hospitalName": "NEO BBC NEW BORN & CHILDREN HOSPITAL",
+      "address": "S.K. MALL, ABOVE BATA, OPP: ANDHRA MAHELA SABHA HOSPITAL, VIDYA NAGAR, OU ROAD, HYD-44",
+      "contacts": ["Dr RANGAIAH: 9949513132", "MADHAVI: 9666154376"]
+    },
+    {
+      "hospitalName": "SRIKARA HOSPITALS",
+      "address": "10-3-188",
+      "contacts": ["Dr. C R HARISH: 8977848058"]
+    },
+    {
+      "hospitalName": "Aadya Hospital",
+      "address": "5-9-29/40 Basheerbagh",
+      "contacts": ["Chinimilli: 9866174816"]
+    },
+    {
+      "hospitalName": "Care Hospital",
+      "address": "6-3-248/2 Road No 1 Banjara Hills Hyderabad",
+      "contacts": ["Nilesh: 8861201220"]
+    },
+    {
+      "hospitalName": "Glenfield Mallareddy Hospital",
+      "address": "5-91 Chapel Road Nampally",
+      "contacts": ["Mohammed Younus: 9866773771"]
+    },
+    {
+      "hospitalName": "Lotus Cure Multi Speciality Hospital",
+      "address": "BLOCK.NO 56, G.V.REDDY COLONY BESIDE SBI BANK OPPOSITE RYTHU BAZAR LANE ALWAL",
+      "contacts": ["Mannem Manjula: 9696228228"]
+    },
+    {
+      "hospitalName": "Rainbow Childrens Medicare Limited",
+      "address": "Road No.2, Banjara Hills",
+      "contacts": ["Anki: 9390686948"]
+    },
+    {
+      "hospitalName": "Sri Uma Devi Dental Hospital",
+      "address": "Champapet",
+      "contacts": ["Prabhakar: 9014496144"]
+    },
+    {
+      "hospitalName": "Asian Institute of Nephrology and Urology",
+      "address": "6-3-562/A, Erramanzil Colony",
+      "contacts": ["Dr Abdullah: 7207830680", "Dr Ajit Kumar: 8886148833", "Dr Santosh Reddy: 9848948675"]
+    },
+    {
+      "hospitalName": "CLEAR VISION EYE HOSPITAL",
+      "address": "3-6-272/B",
+      "contacts": ["Dr N NAVEENA: 8008888511", "Dr R V S KALYANI: 8008888511", "K.KOMALA: 9652301350"]
+    },
+    {
+      "hospitalName": "SAGARLAL MEMORIAL HOSPITAL & MATADIN GOEL RESEARCH CENTRE",
+      "address": "1-5-551, Musheerabad, Hyderabad - 500 020.",
+      "contacts": ["Dr S. Janardhan Rao: 9533960654"]
+    },
+    {
+      "hospitalName": "KAMINENI HOSPITAL KING KOTI",
+      "address": "4-1-1227, KING KOTI ROAD, ABIDS",
+      "contacts": ["Dr. SARASWATHI THIRUPATI: 9866995990", "VIMMY DAFFNY: 9010344520", "KALPANA: 8333816095"]
+    },
+    {
+      "hospitalName": "APOLLO HOSPITALS SECUNDERABAD",
+      "address": "St. Johns road, beside Keys High School, Secunderabad 500003",
+      "contacts": ["Dr EHSAAN: 9491060801", "Dr Upeder Reddy M: 9490722719", "Dr SYED RAHAMTULLAH: 9000750500", "SAROLA PRAMEELA: 7386932098", "N. RAMADEVI: 7893517745"]
+    },
+    {
+      "hospitalName": "ONUS HOSPITALS",
+      "address": "17-1-382/B/7",
+      "contacts": ["Dr. BALARAJU: 9502792322", "TANDRA LAKSHMI: 9010303807"]
+    },
+    {
+      "hospitalName": "SMART VISION EYE SPECIALITIES PVT LTD",
+      "address": "143",
+      "contacts": ["J.SUGANDHINI: 9948506146"]
+    },
+    {
+      "hospitalName": "Solis Eye Care Hospitals Pvt Ltd",
+      "address": "13",
+      "contacts": ["N.SANDHYA RANI: 8185809919"]
+    },
+    {
+      "hospitalName": "IMAGE HOSPITAL - AMEERPET",
+      "address": "PLOT NO 8-3-903/F12&13 BESIDE BATA SHOW ROOM, AMEERPET",
+      "contacts": ["Dr koteshwar rao: 8374447266"]
+    },
+    {
+      "hospitalName": "ARAVIND EYE HOSPITAL PRIVATE LIMITED",
+      "address": "12-2-824/A/1 MEHEDIPATNAM",
+      "contacts": ["Dr. SUBHAS CHANDRA BOSH: 9849490532", "MOHAMMED IBRAHIM: 9908571307"]
+    },
+    {
+      "hospitalName": "Renova Century Hospitals",
+      "address": "8-2-703 BANJARAHILLS",
+      "contacts": ["JAJARAAPU NARSIMHA RAO: 9553146406", "KOPPURAVURI VENKATA RAMANA PRASAD: 9391006809", "ZAREENA: 8374215581"]
+    },
+    {
+      "hospitalName": "RISE CHILDRENS HOSPITAL",
+      "address": "13-6-431/D/77/AB",
+      "contacts": ["Dr. DV RAMA MANOHARA REDDY: 9849139127"]
+    },
+    {
+      "hospitalName": "Bristlecone Hospitals",
+      "address": "Plot No 3-4-136/A Street No 6 Barkatpura Hyderabad",
+      "contacts": ["Maddala Veera: 9849022028"]
+    },
+    {
+      "hospitalName": "Soumya Multi Speciality Hospital",
+      "address": "Plot No. 3-7-218 and 219, Beside Lucid Diagnostics",
+      "contacts": ["Janardhan: 7569712842"]
+    },
+    {
+      "hospitalName": "SMILINE DENTAL HOSPITAL PVT LTD",
+      "address": "8-3-952/10/2&2",
+      "contacts": ["Dr. G.SUNITHA: 9949333444"]
+    },
+    {
+      "hospitalName": "APOLLO HOSPITALS ENTERPRISES LTD (JUBILEE HILLS)",
+      "address": "JUBILEE HILLS HYDEARBAD",
+      "contacts": ["Dr. DASARI MADHUSUDHANA RAO: 9440207766", "Dr. RENUKA: 9849253700", "Dr E Peddi Reddy: 9949569678", "Dr Subba Reddy: 9440732218", "P.VENKATA LAXMI: 8333816081"]
+    },
+    {
+      "hospitalName": "THUMBAY HOSPITAL NEW LIFE - CHADERGHAT",
+      "address": "HYDERABAD",
+      "contacts": ["Dr MASOOD ALI KHAN: 9290530490"]
+    },
+    {
+      "hospitalName": "INNOVA CHILDRENS HEART HOSPITAL PVT",
+      "address": "TARNAKA, SEC-BAD",
+      "contacts": ["Dr RV RAO: 9866377977"]
+    },
+    {
+      "hospitalName": "YASHODA HOSPITALS - SOMAJIGUDA",
+      "address": "SOMAJIGUDA",
+      "contacts": ["B PADMAJA: 9885708873", "Dr. ANAND BHARGAV: 8978790404", "Dr Gopinath: 8333816149", "Dr Parvez: 8333816149", "Dr PRADEEP SUNDER G: 9133493508", "BHUTHARAJU SAIDULU: 8686585908"]
+    },
+    {
+      "hospitalName": "WIN VISION EYE HOSPITALS DILSUKHNAGAR",
+      "address": "16-11-741/5 MOOSARAMBAGH",
+      "contacts": ["Dr K SRIDHAR: 9866843111", "Dr RAMAVATH HIMABINDU: 7032716317"]
+    },
+    {
+      "hospitalName": "AVS WELLNESS HOSPITALS",
+      "address": "7-1-27/2",
+      "contacts": ["BALAIAH BALAIAH: 9912468601", "Indhira: 9989427503", "MAKAM ANURADHA: 9866728357", "PRASHANTH RAO R: 9490667172"]
+    },
+    {
+      "hospitalName": "NEO RETINA EYE CARE CENTRE",
+      "address": "55-9-84/1",
+      "contacts": ["SARITHA: 9959480875"]
+    },
+    {
+      "hospitalName": "EYECURE HOSPITAL",
+      "address": "SCB7-R2-264",
+      "contacts": ["A. NARSING RAO: 9948949870"]
+    },
+    {
+      "hospitalName": "PARAMITHA CHILDRENS HOSPITAL PVT LTD",
+      "address": "3-112, HANUMANNAGAR, CHAITANYAPURI HYDERABAD",
+      "contacts": ["DR GIRIDHAR DERANGULA: 9440251524"]
+    },
+    {
+      "hospitalName": "Hyderabad Kidney and Laparoscopic Centre",
+      "address": "Sir Louis Braille Flyover, Jamia Masjid St,",
+      "contacts": ["Singireddy: 9391012964"]
+    },
+    {
+      "hospitalName": "Win Vision Eye Hospitals Pvt Ltd",
+      "address": "6-3-868/2 Greenlands Begumpet",
+      "contacts": ["Chaparala: 9866843111"]
+    },
+    {
+      "hospitalName": "YASHODA HOSPITALS SECUNDERABAD",
+      "address": "NEAR CLOCK TOWER, SECUNDERABAD",
+      "contacts": ["Dr. P JAGAN MOHAN REDDY: 9154105649", "Dr. VIJAY: 9030000996", "Dr RAJ KUMAR K: 9154105649", "GRANDHALA. MAHESH: 8333816067"]
+    },
+    {
+      "hospitalName": "YASHODA HOSPITAL (MALAKPET)",
+      "address": "MALAKPET HYDERABAD",
+      "contacts": ["Dr. PREETY: 7893821313", "Dr. SRIDHAR: 9701345556", "Dr MINNIE NAOMI M: 9849582041", "Dr MOHAMED ABDUL ALEEM: 9392401681", "Dr MOHAMED MAJID HASAN: 7396606933", "N.SHARATH CHANDRA: 8333816391", "G.ANIL KUMAR: 9063105186", "P.MAMATHA: 9703549700"]
+    },
+    {
+      "hospitalName": "PRIME HOSPITALS",
+      "address": "HYDERABAD",
+      "contacts": ["Dr PREM SAGAR: 9701972100", "SARASWATHI: 8333816191", "SHANKARA MURTHI: 9441513046"]
+    },
+    {
+      "hospitalName": "AMEERPET SUPER SPECIALITY DENTAL HOSPITAL",
+      "address": "6-3-790/7",
+      "contacts": ["Dr. B RAGINI: 9885012444"]
+    },
+    {
+      "hospitalName": "MEDICOVER HOSPITALS, SECRETARIAT",
+      "address": "SECRATERIAT HYDERABAD",
+      "contacts": ["Dr Prasad PGVS: 9390161891", "MURIKIPUDI BHARATHI: 8333816144"]
+    },
+    {
+      "hospitalName": "PUSHPAGIRI EYE HOSPITAL",
+      "address": "HYDERABAD",
+      "contacts": ["DR O MURALIDHAR: 8688820299", "G.NARESH: 8333816067", "k.vijay kumar: 9392493117"]
+    },
+    {
+      "hospitalName": "PRINCESS ESRA HOSPITAL (DCMS)",
+      "address": "HYDERABAD",
+      "contacts": ["Dr IMTIAZ BANDEALI: 7799042906", "JAYALAXMI: 8919700632", "KAREEMUNNISA BEGUM: 8464820013"]
+    },
+    {
+      "hospitalName": "VASAVI HOSPITAL",
+      "address": "6-1-91, OPP. MEERA THEATER, LAKIDI-KA-POOL, KHAIRTABAD",
+      "contacts": ["DR V.SRIMAN NARAYANA: 9912410166", "Dr. SHIVASHANKAR REDDY: 7989144230", "RAYAPATI KHASIMPEERA: 8333816201"]
+    },
+    {
+      "hospitalName": "MADHAVA NURSING HOME, SECUNDERABAD",
+      "address": "43 SAROJINI DEVI ROAD, SECUNDERABAD 500003",
+      "contacts": ["Dr A MOHAN CHARY: 9848048914", "N.GANESH: 9652601966"]
+    },
+    {
+      "hospitalName": "SWARUP EYE CENTRE",
+      "address": "#145",
+      "contacts": ["Dr Pradeep Swarup: 9849003639", "SHAIK ABDULLAH: 9030905149"]
+    },
+    {
+      "hospitalName": "MEDICOVER HOSPITALS, MADHAPUR",
+      "address": "1-90",
+      "contacts": ["Dr SATEESH KUMAR K: 9701876584", "K. CHIRANJEEVI: 9063577110"]
+    },
+    {
+      "hospitalName": "INDUSS HOSPITALS",
+      "address": "PLOT NO.34, KRISHNAVENI NAGAR, OPP. KOTHAPET FRUT MARKET, KOTHAPET",
+      "contacts": ["D.PREMA LATHA: 9581133273", "Dr DB SRINIVAS: 8897237777"]
+    },
+    {
+      "hospitalName": "NEW DELHI CENTRE FOR SIGHT",
+      "address": "Hyderabad",
+      "contacts": ["Dr ABDUL RASHEED: 9652621100", "Dr MAJJI AJIT BABU: 9849712200", "DANDI RAJESH: 8179129161"]
+    },
+    {
+      "hospitalName": "MEDWIN HOSPITALS",
+      "address": "ABIDS, HYDERABAD",
+      "contacts": ["Dr K SRINIVAS KUMAR: 9666101837"]
+    },
+    {
+      "hospitalName": "DURGA BHAI DESHMUKH HOSPITAL AND RESEARCH CENTRE",
+      "address": "VIDYANAGAR, HYDERABAD",
+      "contacts": ["Dr SUDHAKAR: 8985744302", "MAMIDI UMA MAHESWARI: 9490762979"]
+    },
+    {
+      "hospitalName": "LOTUS CHILDRENS HOSPITAL",
+      "address": "6-3-29",
+      "contacts": ["Dr Lavanya: 9949687907"]
+    },
+    {
+      "hospitalName": "MEDISTAR HOSPITALS",
+      "address": "8-3-214/2",
+      "contacts": []
+    },
+    {
+      "hospitalName": "QUALITY CARE INDIA LTD (CARE HOSPITALS- NAMPALLY)",
+      "address": "NAMPALLY",
+      "contacts": ["DR RAMCO1: 9666492522", "Dr YADAGIRI N: 9959636774", "Dr. RAMKRISHNA: 8333816066", "Dr SUNITHA M: 8333816065", "VIKRAM G: 8919397123"]
+    },
+    {
+      "hospitalName": "A P SUPERSPECIALITY DENTAL HOSPITAL",
+      "address": "8-2-120/76",
+      "contacts": ["Dr. SOWJANYA: 8374434520"]
+    },
+    {
+      "hospitalName": "SRI UMA DEVIS DENTAL HOSPITAL",
+      "address": "17-1-383/M/5",
+      "contacts": ["Dr Prabhakar Naik Eslavat: 9014496144", "KRISHNA VENI: 9440371116"]
+    },
+    {
+      "hospitalName": "SURAKSHA DENTAL HOSPITAL",
+      "address": "3-6-168/6/A/1",
+      "contacts": ["DR SAPNARAJOLE: 9849635165"]
+    },
+    {
+      "hospitalName": "Vascular Care Centre",
+      "address": "6-3-649/6",
+      "contacts": ["DR NIRUPAMA DEVI: 9848948675", "MOHMMAD.ASHIF KHAN: 9700766935", "DURGA RAO: 8019239868"]
+    },
+    {
+      "hospitalName": "Renova Neelima Hospital",
+      "address": "-60226 czechcolony",
+      "contacts": ["Dr PALERU SRINIVASULU: 9133302020", "T SRAVANTHI: 9030337992", "YASHODA: 8121275384"]
+    },
+    {
+      "hospitalName": "HYDERABAD EYE INSTITUTE (L V PRASAD EYE INSTITUTE)",
+      "address": "Hyderabad",
+      "contacts": ["Dr K JHANSI: 9676868033", "A SHESHI REKA: 7386178453", "GAUTHAMI D: 9959291936"]
+    },
+    {
+      "hospitalName": "CARE HOSPITALS MALAKPET",
+      "address": "16-6-104",
+      "contacts": ["ANITHA: 9494721092", "DR AMARENDRA KUMAR SINGH: 9985466997"]
+    },
+    {
+      "hospitalName": "SRIKARA HOSPITALS",
+      "address": "1-1-160/7",
+      "contacts": ["AKHIL DADI: 7893029796", "SWAPNA RANI: 9063433560"]
+    },
+    {
+      "hospitalName": "Dr Agarwals Health care Limited",
+      "address": "3-2-261, 262, 262/1",
+      "contacts": ["K.KOMALA: 9652301350"]
+    },
+    {
+      "hospitalName": "PRIME RETINA EYE CARE CENTRE",
+      "address": "3-6-106/1",
+      "contacts": ["GULAGATTU EMIMA: 7842232765", "S JANAKI: 7989390688"]
+    },
+    {
+      "hospitalName": "Dr Akbar Eye Hospital",
+      "address": "12-2-831",
+      "contacts": ["K GOVARADHAN: 9704848454"]
+    },
+    {
+      "hospitalName": "PRAJASAI HOSPITAL",
+      "address": "H.NO.1-10-189",
+      "contacts": ["Dr V.VENKATARATNAM: 9912136546"]
+    },
+    {
+      "hospitalName": "SAI VANI SUPER SPECIALITY HOSPITALS LTD",
+      "address": "1-2-365/36/6&7",
+      "contacts": ["Dr MUJAHED ULLAH KHAN: 8121895421", "KANDULA SWARNALATHA: 9346556123"]
+    },
+    {
+      "hospitalName": "SBR PULSE HOSPITAL",
+      "address": "PLOT NO.34",
+      "contacts": ["DR ANIL: 9848948675"]
+    },
+    {
+      "hospitalName": "TKR IKON HOSPITAL",
+      "address": "16-11-741/c/1/18, Behind TMC, Dilsukhnagar",
+      "contacts": ["DR Y ANITHA REDDY: 9246299015"]
+    },
+    {
+      "hospitalName": "SREE NETRALAYA EYE HOSPITAL AND LASER CENTRE",
+      "address": "11-9-1",
+      "contacts": ["Dr P SREENIVASA RAO: 9676546185", "A.SARITHA: 8801354449", "GEETHA D: 8333816338"]
+    },
+    {
+      "hospitalName": "MEDICOVER HOSPITALS BEGUMPET",
+      "address": "7-1-21",
+      "contacts": []
+    },
+    {
+      "hospitalName": "Sowjanya Dental Hospital",
+      "address": "1st Floor Shreemukh Complex Himayath Nagar",
+      "contacts": ["Venugopal: 9866014664"]
+    },
+    {
+      "hospitalName": "DR ANUS DENTAL CARE",
+      "address": "1-1-169/1",
+      "contacts": ["Dr A ANUSHA RANI: 7569999199"]
+    },
+    {
+      "hospitalName": "FORT DENTAL HOSPITAL",
+      "address": "8-1-523/247/1",
+      "contacts": ["Dr. SRINIVAS REDDY POTU: 7095638398"]
+    },
+    {
+      "hospitalName": "SRI ROOTS DENTAL CARE",
+      "address": "7-91",
+      "contacts": ["Dr. NANDANA VEMIREDDY: 8008144334", "Dr.Neela Ajitha: 8008144334"]
+    },
+    {
+      "hospitalName": "KRISHNA INSTITUTE OF MEDICAL SCIENCES LTD",
+      "address": "MINISTER ROAD, SEC-BAD",
+      "contacts": ["DR Narsimha Chari: 8297384384", "A JAIPAL: 9908833225", "MJ.SRILATHA: 8686935004"]
+    },
+    {
+      "hospitalName": "DR HARI KISHAN EYE CARE",
+      "address": "3-4-512/80",
+      "contacts": ["Dr SAMATHA: 9985550479", "JANAKI S: 7989390688"]
+    },
+    {
+      "hospitalName": "Virinchi Heathcare Private Limted",
+      "address": "6-3-3-2-3/1 ROADNOONEBANJARAHILLS",
+      "contacts": ["Dr N V V SATYANARAYANA MURTY: 8374736532", "TOGARI VAJRA: 9912254082"]
+    },
+    {
+      "hospitalName": "SRI SAI KIDNEY CENTER",
+      "address": "7-1-59/4/8 Near Lal Bunglaw Ameerpet",
+      "contacts": ["DR ACHYUTABABU: 9989557555"]
+    },
+    {
+      "hospitalName": "HOPE CHILDRENS HOSPITAL",
+      "address": "5-9-24/81 BASHEERBAGH",
+      "contacts": ["Dr P MADAN MOHAN RAO: 9848948675"]
+    },
+    {
+      "hospitalName": "RK HOSPITALS",
+      "address": "8-2-145/M/27",
+      "contacts": ["DR SRISAILAM: 9866233555"]
+    },
+    {
+      "hospitalName": "Asvins Speciality Hospitals",
+      "address": "6-3-903/A and B Somajiguda Hyderabad",
+      "contacts": ["G Asvin: 9618161032"]
+    },
+    {
+      "hospitalName": "M/s. Aditya Hospital",
+      "address": "4-1-16 BOGGULAKUNTA",
+      "contacts": ["Dr Tulla: 9399955021"]
+    },
+    {
+      "hospitalName": "Malik Dental Cosmetic and Surgery Centre",
+      "address": "7-2-663 Subhash Road",
+      "contacts": ["Malik Jawwad: 9848393702"]
+    },
+    {
+      "hospitalName": "Navjeevan Hospitals",
+      "address": "90 P and T Colony",
+      "contacts": ["Anoop: 9885086000"]
+    },
+    {
+      "hospitalName": "FMS DENTAL HOSPITAL",
+      "address": "5-1-680",
+      "contacts": ["DR P PARTHASARADHI REDDY: 8885060759"]
+    },
+    {
+      "hospitalName": "BASAVATARAKAM INDO AMERICAN CANCER HOSPITAL & RESEARCH INSTITUTE",
+      "address": "BANJARAHILLS, HYD",
+      "contacts": ["DR BHASKAR: 9010866734", "JAGANMOHN REDDY: 8333816138", "B RAJINI: 9494225244", "A NIRANJANAMMA: 9392982345", "THOSHA SHYAM SUNDER RAO: 7801014059", "R. LAVANYA: 9676318986"]
+    },
+    {
+      "hospitalName": "MAA HOSPITALS PVT. LTD. (UNIT OF VASAVI ENT INSTITUTE)",
+      "address": "# 6-1-91, II FLOOR, OPP: MEERA THEATRE, LAKDIKAPOOL, HYDERABAD",
+      "contacts": ["DR K.D.MEGHANADH: 9848046246", "Dr MANIKA SALUJA: 7675078933", "Dr NISHAN: 9000187187"]
+    },
+    {
+      "hospitalName": "WOODLANDS HOSPITAL",
+      "address": "HYDERABAD",
+      "contacts": ["Dr SUSHMA AGARWAL: 9030993111"]
+    },
+    {
+      "hospitalName": "GOODWILL KIDNEY AND SURGICAL CENTRE",
+      "address": "HYDERABAD",
+      "contacts": ["Dr JABEEN: 9346586894"]
+    },
+    {
+      "hospitalName": "GURUNANAK CARE HOSPITAL",
+      "address": "1-4-908/7/1 Bakaram, Musheerabad, Hyd-20",
+      "contacts": ["Dr David: 9515129672", "GOUTHAMI: 9989017834"]
+    },
+    {
+      "hospitalName": "ARUN DENTAL CLINIC",
+      "address": "4-6-69/A",
+      "contacts": ["Dr K PAVAN UMAR: 7842964403"]
+    },
+    {
+      "hospitalName": "DENTAL VENUE MULTI SPECIALITY HOSPITAL",
+      "address": "FNO 14, DEEPTHI APPTS, S.P. ROAD, SECUNDERABAD",
+      "contacts": ["Dr. KRITI GOWD: 9908611856"]
+    },
+    {
+      "hospitalName": "UNIMED HEALTHCARE PVT LTD (STAR HOSPITALS)",
+      "address": "HYDERABAD",
+      "contacts": ["Dr CHRISTIAN RICHARD SEMUAL: 8886246970", "Dr. PAVAN KUMAR I: 9866505684", "Dr. J.CHIDRUPI SHARMA: 9618480448", "Dr Venkatappaiah: 9866760558", "N.SRISHAILAM: 7386973171"]
+    },
+    {
+      "hospitalName": "Renova Bibi Cancer Hospital",
+      "address": "MALAKPET, HYD",
+      "contacts": ["DR SHAKEELA BANU: 9949370253", "ABHIJITH ADHIKAM: 8333817238"]
+    },
+    {
+      "hospitalName": "MAHESH HOSPITAL AND RESEARCH FOUNDATION",
+      "address": "3-6-756, street no-13, Himayatnagar",
+      "contacts": ["Dr. SUDDALA VIDYA SAGAR: 9533960654"]
+    },
+    {
+      "hospitalName": "QUALITY CARE INDIA LTD (CARE HOSPITALS BANJARAHILLS)",
+      "address": "BANJARA HILLS",
+      "contacts": ["Dr. SHASHIKANTH: 9949699328", "Dr. VENKATESWARA PRASAD: 9908521509", "M.KOTESWARA RAO: 9949699328", "VIJAY KUMAR: 8686320657"]
+    },
+    {
+      "hospitalName": "SATYA KIDNEY CENTRE AND SUPER SPECIALITY HOSPITAL",
+      "address": "3-6-426, STREET NO 4, HIMAYATHNAGAR, HYDERABAD",
+      "contacts": ["Dr DDI JYOTHI: 8008514102"]
+    },
+    {
+      "hospitalName": "SRI NARMADA HOSPITAL",
+      "address": "GANDHINAGAR, HYDERABAD",
+      "contacts": ["DR V LAKSHMI: 9391321137"]
+    },
+    {
+      "hospitalName": "SURAKSHA CHILDRENS HOSPITAL",
+      "address": "12-13-64, BESIDE TARNAKA FLYOVER, TARNAKA, SECUNDERABAD",
+      "contacts": ["Dr V.Leela Kumar: 9848035148"]
+    },
+    {
+      "hospitalName": "SHISHIRA HOSPITALS",
+      "address": "8-3-903/A/1/3/3B",
+      "contacts": ["E. SWAMY: 9542236096"]
+    },
+    {
+      "hospitalName": "OLIVE HOSPITAL",
+      "address": "12-2-718/3-5",
+      "contacts": ["Dr SHAJAHAN: 9440022529", "J.RAVIKUMAR: 9603779551", "DARGA. VIJAY: 8333816494"]
+    },
+    {
+      "hospitalName": "SAI SANJEEVINI HOSPITALS",
+      "address": "V-7, KOTHAPET, HYDERABAD",
+      "contacts": ["DR K MADHUSUDHAN: 8333816402", "DR SAMSON VARAPRASAD: 9441069164", "Dr HARIBABU NAIK RAMAVATH: 8978480102", "KOTHA.SUDHAKAR: 8333816385", "KARINGU.CHANDRA SEKHAR: 9533153535"]
+    },
+    {
+      "hospitalName": "OZONE HOSPITALS",
+      "address": "11-13-201/33. KOTHAPET, DILSUKHNAGAR",
+      "contacts": ["DR DEVUDU ARUNA: 8501915893", "Dr. M.SHANKAR REDDY: 9550021258", "Dr JAYANTH REDDY KARRI", "K PARAMESH: 8125203424"]
+    },
+    {
+      "hospitalName": "SUNSHINE HEART INSTITUTE",
+      "address": "H.No.1-7-55, 1-7-69 & 69/1, 69/5 Paradise, S.D. Road",
+      "contacts": ["DR Femina: 8008436123"]
+    },
+    {
+      "hospitalName": "Gleneagles Hospital",
+      "address": "LAKDIKAPOOL",
+      "contacts": ["DR N SREE DEVI: 9440090316", "MAKALA.VISHNU VARDHAN REDDY: 8008341977", "QUADER SHAREEF: 8309664756", "RAVIKANTH: 7386986706"]
+    },
+    {
+      "hospitalName": "APOLLO INSTITUTE OF MEDICAL SCIENCES AND RESEARCH",
+      "address": "Hyderabad",
+      "contacts": ["Dr. PHADNIS ROHIT KIRAN: 9912056094", "RAJESH: 7702945404", "Nalla. BAGYA LAXMI: 9705465173"]
+    },
+    {
+      "hospitalName": "Max Super Speciality Hospital",
+      "address": "Hyderabad",
+      "contacts": []
+    }
+  ]
+};
