@@ -1,0 +1,73 @@
+function filterHospitals() {
+            if(!document.getElementById('healthCardSelect')) return;
+            const card = document.getElementById('healthCardSelect').value;
+            const hospType = document.getElementById('hospitalTypeSelect').value;
+            const selectedSpecialty = document.getElementById('specializationFilter').value;
+            
+            const searchQuery = document.getElementById('globalSearch').value.toLowerCase().trim();
+            
+            let hospitals = cardHospitalsMap[card] || cardHospitalsMap["NEHS Card"];
+            
+            currentFilteredList = hospitals.filter(h => {
+                let matchesType = !hospType || hospType === 'All' || h.type === hospType;
+                let matchesSpec = selectedSpecialty === 'All' || h.specialty === selectedSpecialty;
+                let matchesSearch = !searchQuery || h.name.toLowerCase().includes(searchQuery);
+                return matchesType && matchesSpec && matchesSearch;
+            });
+        }
+
+        function searchHub() {
+            const searchInput = document.getElementById('globalSearch');
+            if(!searchInput) return;
+            const query = searchInput.value.toLowerCase().trim();
+            const suggestionsBox = document.getElementById('searchSuggestions');
+            
+            if(!query) {
+                suggestionsBox.classList.add('hidden');
+                suggestionsBox.innerHTML = '';
+                if(document.getElementById('resultCard').style.display !== 'none') {
+                    resetPageAndRender();
+                }
+                return;
+            }
+
+            let matches = [];
+            Object.keys(cardHospitalsMap).forEach(cardName => {
+                cardHospitalsMap[cardName].forEach(h => {
+                    if(h.name.toLowerCase().includes(query) || h.specialty.toLowerCase().includes(query)) {
+                        matches.push({ ...h, cardName });
+                    }
+                });
+            });
+
+            if(matches.length === 0) {
+                suggestionsBox.innerHTML = `<div class='p-2.5 text-slate-500'>No matching hospitals found.</div>`;
+                suggestionsBox.classList.remove('hidden');
+                return;
+            }
+
+            let html = '';
+            matches.slice(0, 6).forEach(m => {
+                let safeName = m.name.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+                html += `<div class='p-2.5 hover:bg-slate-50 cursor-pointer border-b border-slate-100' onclick='selectSearchedHospital("${m.cardName}", "${m.type}", "${safeName}")'>
+                    <div class='font-bold text-slate-800'>${m.name}</div>
+                    <div class='text-[10px] text-slate-500'>Hyderabad | Card: ${m.cardName}</div>
+                </div>`;
+            });
+            suggestionsBox.innerHTML = html;
+            suggestionsBox.classList.remove('hidden');
+            
+            if(document.getElementById('resultCard').style.display !== 'none') {
+                resetPageAndRender();
+            }
+        }
+
+        function selectSearchedHospital(cardName, hospitalType, hospitalName) {
+            document.getElementById('healthCardSelect').value = cardName;
+            document.getElementById('stateSelect').value = "Telangana";
+            updateDistricts();
+            document.getElementById('hospitalTypeSelect').value = hospitalType;
+            document.getElementById('searchSuggestions').classList.add('hidden');
+            document.getElementById('globalSearch').value = hospitalName;
+            displayHubInfo();
+        }
